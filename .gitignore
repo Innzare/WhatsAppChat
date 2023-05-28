@@ -4,4 +4,6 @@ server/node_modules
 client/package-lock.json
 server/package-lock.json
 
+green-api-server
+
 .DS_Store
