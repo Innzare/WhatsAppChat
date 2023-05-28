@@ -1,0 +1,38 @@
+@import 'Src/styles/variables.scss';
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $panel-header-height;
+  background-color: $intro-background;
+  padding: 10px 16px;
+  box-shadow: 0 0 3px rgba(11, 20, 26, 0.4);
+  z-index: 10;
+
+  &-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &__text {
+      color: #fff;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 8px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        fill: $panel-header-icon;
+      }
+    }
+  }
+}

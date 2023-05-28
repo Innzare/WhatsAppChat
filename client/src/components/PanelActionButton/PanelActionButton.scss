@@ -1,0 +1,15 @@
+@import 'Src/styles/variables.scss';
+
+.panel-action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.25s ease-in-out;
+
+  &:hover {
+    background-color: $menu-bar-item-background-active;
+  }
+}

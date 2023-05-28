@@ -1,0 +1,42 @@
+@import './fonts.scss';
+@import './variables.scss';
+@import 'Src/components/SvgIcons/SvgIcons.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+  }
+}
+
+body {
+  font-family: 'SF', sans-serif;
+  background: $intro-background;
+}
+
+input {
+  border: none;
+  background: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}

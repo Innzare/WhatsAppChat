@@ -1,0 +1,25 @@
+@import 'Src/styles/variables.scss';
+
+.chat-footer {
+  form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 62px;
+    padding: 5px 16px;
+    background-color: $intro-background;
+
+    .chat-send-message-input {
+      width: 100%;
+      padding: 15px 12px;
+      background-color: #2a3942;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 15px;
+
+      &::placeholder {
+        color: $secondary-lighter;
+      }
+    }
+  }
+}

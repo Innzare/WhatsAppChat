@@ -1,0 +1,64 @@
+@import 'Src/styles/variables.scss';
+
+.chat-list-item {
+  display: flex;
+  color: #fff;
+  width: 100%;
+  min-height: 72px;
+  cursor: pointer;
+  user-select: none;
+
+  &--active {
+    background-color: $background-default-hover;
+  }
+
+  &:hover {
+    background-color: $background-default-hover;
+  }
+
+  &:last-child {
+    .chat-list-item__text {
+      border-bottom: none;
+    }
+  }
+
+  &__avatar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px 0 13px;
+  }
+
+  &__avatar {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 2px;
+    padding-right: 15px;
+    border-bottom: 1px solid $border-list;
+    min-width: 0;
+  }
+
+  &__title {
+    font-size: 16px;
+  }
+  &__message {
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $secondary;
+  }
+}

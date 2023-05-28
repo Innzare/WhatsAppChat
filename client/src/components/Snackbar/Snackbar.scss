@@ -1,0 +1,15 @@
+.snackbar {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  transition: transform 0.25s ease-in-out;
+  transform: translateY(calc(100% + 20px));
+  z-index: 20;
+
+  &--open {
+    transform: translateY(0%);
+  }
+}

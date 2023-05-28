@@ -1,0 +1,160 @@
+$colorPrimary: #00a884;
+$colorError: #c23f38;
+$colorText: black;
+$colorBackground: white;
+$fontSize: 16px;
+$inputHeight: 48px;
+$inputPad: 2px;
+
+.textfield {
+  position: relative;
+  display: inline-block;
+  font-size: $fontSize;
+  box-sizing: border-box;
+  width: 100%;
+  height: $inputHeight;
+  margin: 0;
+
+  > input {
+    display: block;
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    border-top: solid 24px transparent;
+    border-bottom: 1px solid rgba($colorText, 0.6);
+    border-radius: 4px 4px 0 0;
+    padding: 2px $inputPad 4px;
+    width: 100%;
+    height: inherit;
+    color: rgba($colorText, 0.87);
+    -webkit-text-fill-color: currentColor;
+    box-shadow: none;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: left;
+    background: transparent;
+  }
+
+  > label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    box-sizing: border-box;
+    padding: 4px $inputPad 0;
+    color: rgba($colorText, 0.6);
+    font-size: 75%;
+    line-height: $fontSize;
+    pointer-events: none;
+    width: 100%;
+    white-space: nowrap;
+    text-align: left;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+
+    &:before {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      background-color: $colorText;
+      height: 1px;
+      left: 0;
+      width: 100%;
+      visibility: hidden;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      background-color: $colorPrimary;
+      height: 1px;
+      left: 45%;
+      width: 10px;
+      visibility: hidden;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  > p {
+    height: $fontSize;
+    padding: 0;
+    margin: 0.25em;
+    font-size: 80%;
+    color: rgba($colorText, 0.6);
+  }
+
+  & > span {
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 7px $inputPad 0;
+    color: $colorText;
+    line-height: $fontSize;
+    transition: all 0.2s;
+    transition-delay: 500ms;
+    &.prefix {
+      left: 0;
+    }
+    &.suffix {
+      right: 0;
+    }
+  }
+
+  &:not(.disabled):hover,
+  &:focus {
+    background-color: #fbfbfa;
+  }
+
+  & > input:not(:disabled):hover {
+    & + label {
+      &:before {
+        visibility: visible;
+      }
+    }
+  }
+
+  & > input:focus {
+    outline: none;
+  }
+  &:not(.error) > input:focus + label {
+    color: $colorPrimary;
+    &:after {
+      visibility: visible;
+      left: 0;
+      width: 100%;
+    }
+  }
+  & > input:not(:focus):placeholder-shown + label {
+    font-size: inherit;
+    top: 12px;
+  }
+
+  & > input:not(:focus):placeholder-shown ~ span {
+    visibility: hidden;
+    display: none;
+  }
+
+  &--dark {
+    > input {
+      border-bottom: 1px solid rgba(#fff, 0.6);
+      color: #fff;
+    }
+
+    > label {
+      color: #fff;
+
+      &:before {
+        background-color: $colorBackground;
+      }
+    }
+
+    &:not(.disabled):hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}

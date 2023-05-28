@@ -1,0 +1,13 @@
+@import 'Src/styles/variables.scss';
+
+.chats-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 40%;
+  max-width: 40%;
+  min-width: 340px;
+  max-width: 450px;
+  height: 100vh;
+  background: $default-background;
+}

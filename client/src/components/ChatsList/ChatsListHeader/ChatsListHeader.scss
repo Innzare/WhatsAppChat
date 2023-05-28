@@ -1,0 +1,18 @@
+@import 'Src/styles/variables.scss';
+
+.chats-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  height: $panel-header-height;
+  padding: 10px 16px;
+  background: $intro-background;
+
+  &__right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+  }
+}
