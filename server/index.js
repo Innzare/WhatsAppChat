@@ -3,8 +3,8 @@ const whatsAppClient = require("@green-api/whatsapp-api-client");
 const app = express();
 const PORT = 8081;
 
-const http = require('http').Server(app);
 const cors = require('cors');
+const http = require('http').Server(app.use(cors()));
 const socketIO = require('socket.io')(http, {
   cors: {
     origin: 'http://localhost:8080'

@@ -12,11 +12,14 @@ Frontend:
 
 Backend:
 
+- [GreenApi](https://green-api.com/)
 - Node
 - Express
 - SocketIO
 
 ## Setup
+
+Client
 
 1. Clone the repository
 
@@ -29,6 +32,8 @@ npm install
 ```bash
 npm run start
 ```
+
+Server
 
 Change directory to server and install the dependencies
 
